@@ -39,7 +39,7 @@ CyberTrack/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CyberTrack.git
+git clone https://github.com/Dxryan01/CyberTrack.git
 ```
 
 2. Navigate to the project directory:
@@ -96,7 +96,7 @@ This project also represents an opportunity to explore the practical use of AI-a
 
 ## Author
 
-**YOUR NAME**
+**Dxryan01**
 
 Cybersecurity Student | Web Development & Ethical Hacking Enthusiast
 
