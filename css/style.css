@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #0b1120;
+    --surface: #111b2e;
+    --border: #24334d;
+    --text: #e5edf8;
+    --muted: #8da0bb;
+    --accent: #22d3ee;
+    --success: #34d399;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.status {
+    color: var(--success);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 24px;
+}
+
+.hero {
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: var(--muted);
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card,
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.stat-card {
+    padding: 24px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.panel {
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.panel-header {
+    margin-bottom: 22px;
+}
+
+.panel-header h2 {
+    font-size: 1.1rem;
+}
+
+#activity-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+input,
+select {
+    background: #0c1526;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    padding: 12px;
+    min-width: 0;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+    outline: 2px solid transparent;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: #08202a;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 12px 18px;
+    white-space: nowrap;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    background: #0c1526;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+}
+
+.activity-info h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.activity-info p {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.activity-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge {
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 5px 9px;
+}
+
+.badge.todo {
+    background: #25334b;
+    color: #b8c5d9;
+}
+
+.badge.progress {
+    background: #123b4c;
+    color: var(--accent);
+}
+
+.badge.completed {
+    background: #123b32;
+    color: var(--success);
+}
+
+.delete-btn {
+    background: transparent;
+    color: #f87171;
+    padding: 6px;
+}
+
+.empty-message {
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    #activity-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #activity-form .form-group:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .container {
+        padding: 35px 16px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 16px 12px;
+    }
+
+    .stat-card strong {
+        font-size: 1.5rem;
+    }
+
+    #activity-form {
+        grid-template-columns: 1fr;
+    }
+
+    #activity-form .form-group:first-child {
+        grid-column: auto;
+    }
+
+    .activity-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .activity-actions {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
